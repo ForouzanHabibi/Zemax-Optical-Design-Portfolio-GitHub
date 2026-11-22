@@ -48,18 +48,6 @@ Relative to V5, V9 reduces the **5° RMS error by approximately 84.9%**, while s
 - `results/summary/design_summary.csv`: condensed cross-stage table.
 - `results/v5`–`results/v9_joint`: selected model snapshots and numerical outputs.
 
-## Environment
-
-- Windows with a licensed installation of **Ansys Zemax OpticStudio** and accessible ZOS-API.
-- Python 3.11 (64-bit) was specified in the original project documentation; compatible OpticStudio/Python installations may vary.
-- Python dependencies in `requirements.txt` (`pythonnet`, `scipy`).
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-The ZOS-API depends on the locally installed OpticStudio assemblies and license; **this repository does not include proprietary software or license files**.
-
 ## Running the scripts
 
 From the repository root, use the relevant script. Review the command-line options and local OpticStudio configuration before execution.
@@ -72,15 +60,6 @@ python src/optimize_multifield_v9.py --help
 ```
 
 The `field1.CFG`, `field2.CFG`, and `field3.CFG` files are retained for the three-field Zernike analysis. They are OpticStudio configuration files, not Python dependencies. Some scripts use local defaults or generate their own output folders; inspect their options before running. **Do not assume the optimization will reproduce identical candidates on every machine.**
-
-## Validation and limitations
-
-- Prescription Data in OpticStudio confirmed EFL approximately 50 mm for the selected V9 design.
-- The front/rear footprint checks showed **100% rays through for the sampled rays** (Ray Density 20), not a guarantee of zero vignetting under every condition.
-- FFT MTF was inspected visually at 550 nm (256×256 sampling, maximum plotted frequency 370 cycles/mm), but numeric MTF curves were not exported, so no numerical MTF improvement is claimed.
-- The 5° field is **not diffraction limited**.
-- Manufacturing tolerances, thermal performance, stray light, edge thickness under tolerances, and fabrication feasibility are not comprehensively validated.
-- Historical optimizer reports with thousands of repetitive iteration dumps and generated `.ZDA` sidecars are omitted from this GitHub-friendly release. Original CSV logs and `.zos` designs are retained.
 
 ## Project organization
 
