@@ -1,0 +1,11 @@
+V5: even-asphere A4 and image-plane wavefront optimization
+Fixed R1=35.000000 mm, R2=-95.124393 mm; N-BK7, 550 nm, EPD=10 mm
+Analytical paraxial EFL (vertex curvature): 50.000000 mm
+Baseline Zernike RMS at V4 spot focus: 0.42641005 waves
+Best Zernike RMS: 0.00067905 waves
+Best A4: -4.158164063e-06 mm^-3
+Best image distance: 47.563308 mm
+Best edge thickness: 4.512117 mm
+Final measured RMS spot: 0.133054 um
+VALIDATE: Even Asphere Par2=A4, EFL, Zernike Z11, MTF, sag/slope, tolerances in OpticStudio.
+NOT VALIDATED: manufacturing feasibility and full-field performance.

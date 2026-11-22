@@ -1,0 +1,2 @@
+pythonnet>=3.0,<4
+scipy>=1.11,<2
